@@ -28,9 +28,9 @@ function mailer(user_data){
       from: process.env.myemail, // Use the email address or domain you verified above
       subject: 'Welcome Mail',
       text: `We pleased to Welcome ${user_data.firstname}`,
-      html: `<div><h1>Dear ${user_data.firstname} </h1></div>
-            <p><h3>Thank You For SignUp</h3></p>
-            <h4>Regards</h4>`
+      html: `<div><h1>Dear ${user_data.firstname} ${user_data.lastname}</h1></div>
+            <p><h3>We are Pleased to Welcome You</h3></p>
+            <h4>Thank You for Sign Up</h4>`
     };
     sgMail
       .send(msg)
